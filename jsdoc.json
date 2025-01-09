@@ -3,7 +3,7 @@
     "source": {
         "include": ["js"],
         "includePattern": ".js$",
-        "excludePattern": "(documentacion|docs)"
+        "excludePattern": "(node_modules|doc)"
     },
 
     "templates": {
