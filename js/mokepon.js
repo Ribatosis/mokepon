@@ -1,5 +1,26 @@
 
-   //SELECCIONAR MASCOTA
+
+ let ataqueJugador  
+
+/**
+ * Obtiene el botón del DOM con el ID 'botonMascotas' y asigna un evento de clic que ejecuta la función 'seleccionarMascotaJugador'.
+ * @type {HTMLButtonElement}
+*/
+function iniciarJuego(){
+    let botonMascotaJugador = document.getElementById('botonMascotas');
+    botonMascotaJugador.addEventListener('click', seleccionarMascotaJugador);
+
+    let botonFuegoJs = document.getElementById('botonFuego');
+    botonFuegoJs.addEventListener('click', ataqueFuego);
+
+    let botonAguaJs = document.getElementById('botonAgua');
+    botonAguaJs.addEventListener('click', ataqueAgua);
+
+    let botonTierraJs = document.getElementById('botonTierra');
+    botonTierraJs.addEventListener('click', ataqueTierra);
+}
+
+ //SELECCIONAR MASCOTA
 
 /**
  * En la función cuando el jugador da click sobre una mascota y presiona el botón "seleccionar", el DOM
@@ -9,6 +30,27 @@
 */
 
 function seleccionarMascotaJugador(){
+
+    /**
+     * Las variables que terminan en 'Champ' representan elementos del DOM que corresponden 
+     * a los diferentes campeones que puede seleccionar el jugador.
+     * @type {HTMLElement}
+    */
+
+    let hipogeChamp = document.getElementById('hipoge');
+    let capipepoChamp = document.getElementById('capipepo');
+    let rarigueyaChamp = document.getElementById('rarigueya');
+    let langostelvisChamp = document.getElementById('langostelvis');
+    let tucapalmaChamp = document.getElementById('tucapalma');
+    let pydosChamp = document.getElementById('pydos');
+
+    /**
+     * Le muestra al jugador qué mascota eligió por medio del DOM.
+     * @type {HTMLElement}
+    */
+
+    let spanMascotaJugador = document.getElementById('mascotaJugador');
+
 
     if(hipogeChamp.checked){
         spanMascotaJugador.innerHTML = 'Hipoge';
@@ -27,7 +69,6 @@ function seleccionarMascotaJugador(){
     }
 
     seleccionarMascotaEnemigo()
-
 }
 
    //---
@@ -43,6 +84,14 @@ function seleccionarMascotaJugador(){
 
 function seleccionarMascotaEnemigo(){
     let ataqueEnemigo = aleatorio(1, 6);
+
+    /**
+     * Le muestra al jugador cuál es la mascota del enemigo por medio del DOM.
+     * @type {HTMLElement}
+    */
+
+    let spanMascotaEnemigo = document.getElementById('mascotaEnemigo')
+
 
     if(ataqueEnemigo == 1){
         spanMascotaEnemigo.innerHTML = 'Hipoge'
@@ -61,6 +110,21 @@ function seleccionarMascotaEnemigo(){
 
    //---
 
+function ataqueFuego(){
+    ataqueJugador = 'FUEGO'
+    alert(ataqueJugador)
+}
+
+function ataqueAgua(){
+    ataqueJugador = 'AGUA'
+    alert(ataqueJugador)
+}
+
+function ataqueTierra(){
+    ataqueJugador = 'TIERRA'
+    alert(ataqueJugador)
+}
+
    //FUNCIÓN ALEATORIEDAD
 
 /** 
@@ -74,51 +138,11 @@ function aleatorio(min, max){
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-   //---
-
-   //VARIABLES CAMPEONES
-
 /**
- * Las variables que terminan en 'Champ' representan elementos del DOM que corresponden 
- * a los diferentes campeones que puede seleccionar el jugador.
- * @type {HTMLElement}
+ * Inicializa el juego al cargar la página.
+ * Agrega un event listener al botón de selección de mascota del jugador.
 */
 
-let hipogeChamp = document.getElementById('hipoge');
-let capipepoChamp = document.getElementById('capipepo');
-let rarigueyaChamp = document.getElementById('rarigueya');
-let langostelvisChamp = document.getElementById('langostelvis');
-let tucapalmaChamp = document.getElementById('tucapalma');
-let pydosChamp = document.getElementById('pydos');
+window.addEventListener('load', iniciarJuego)
 
-   //---
 
-   //VARIABLES MASCOTAS
-
-/**
- * Le muestra al jugador qué mascota eligió por medio del DOM.
- * @type {HTMLElement}
-*/
-
-let spanMascotaJugador = document.getElementById('mascotaJugador');
-
-/**
- * Le muestra al jugador cuál es la mascota del enemigo por medio del DOM.
- * @type {HTMLElement}
-*/
-
-let spanMascotaEnemigo = document.getElementById('mascotaEnemigo')
-
-   //---
-
-   //EVENTO MASCOTA JUGADOR
-
-/**
- * Obtiene el botón del DOM con el ID 'botonMascotas' y asigna un evento de clic que ejecuta la función 'seleccionarMascotaJugador'.
- * @type {HTMLButtonElement}
-*/
-
-let botonMascotaJugador = document.getElementById('botonMascotas');
-botonMascotaJugador.addEventListener('click', seleccionarMascotaJugador);
-
-   //---
