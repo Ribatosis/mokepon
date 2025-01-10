@@ -1,12 +1,19 @@
 
 
  let ataqueJugador  
+ let contraAtaqueEnemigo
 
 /**
- * Obtiene el botón del DOM con el ID 'botonMascotas' y asigna un evento de clic que ejecuta la función 'seleccionarMascotaJugador'.
- * @type {HTMLButtonElement}
-*/
+ * El jugador selecciona su mascota, el jugador da click en uno de los botones de ataque llamando a la función 
+ * propia de cada botón.
+ * @returns {void}
+ */
 function iniciarJuego(){
+
+    /**
+     * Obtiene el botón del DOM con el ID 'botonMascotas' y asigna un evento de clic que ejecuta la función 'seleccionarMascotaJugador'.
+     * @type {HTMLButtonElement}
+    */
     let botonMascotaJugador = document.getElementById('botonMascotas');
     botonMascotaJugador.addEventListener('click', seleccionarMascotaJugador);
 
@@ -18,6 +25,7 @@ function iniciarJuego(){
 
     let botonTierraJs = document.getElementById('botonTierra');
     botonTierraJs.addEventListener('click', ataqueTierra);
+
 }
 
  //SELECCIONAR MASCOTA
@@ -83,7 +91,7 @@ function seleccionarMascotaJugador(){
 */
 
 function seleccionarMascotaEnemigo(){
-    let ataqueEnemigo = aleatorio(1, 6);
+    let mascotaAleatoria = aleatorio(1, 6);
 
     /**
      * Le muestra al jugador cuál es la mascota del enemigo por medio del DOM.
@@ -93,36 +101,76 @@ function seleccionarMascotaEnemigo(){
     let spanMascotaEnemigo = document.getElementById('mascotaEnemigo')
 
 
-    if(ataqueEnemigo == 1){
+    if(mascotaAleatoria == 1){
         spanMascotaEnemigo.innerHTML = 'Hipoge'
-    }else if(ataqueEnemigo == 2){
+    }else if(mascotaAleatoria == 2){
         spanMascotaEnemigo.innerHTML = 'Capipepo'
-    }else if(ataqueEnemigo == 3){
+    }else if(mascotaAleatoria == 3){
         spanMascotaEnemigo.innerHTML = 'Rarigueya'
-    }else if(ataqueEnemigo == 4){
+    }else if(mascotaAleatoria == 4){
         spanMascotaEnemigo.innerHTML = 'Langostelvis'
-    }else if(ataqueEnemigo == 5){
+    }else if(mascotaAleatoria == 5){
         spanMascotaEnemigo.innerHTML = 'Tucapalma'
-    }else if(ataqueEnemigo == 6){
+    }else if(mascotaAleatoria == 6){
         spanMascotaEnemigo.innerHTML = 'Pydos'
     }
 }
 
    //---
 
+/**
+ * Selecciona el tipo de ataque enemigo usando la función aleatorio y lo almacena en la variable 
+ * global "contraAtaqueEnemigo", esto permite que la variable sea dinamica y se pueda llamar esta función más adelante
+ * en el código.
+ * @returns {void}
+*/   
+
+function ataqueEnemigo(){
+    let contraAtaqueAleatorio = aleatorio(1, 3);
+
+    if(contraAtaqueAleatorio == 1){
+        contraAtaqueEnemigo = 'FUEGO'
+        alert("Ataque enemigo " + contraAtaqueEnemigo)
+    }else if(contraAtaqueAleatorio == 2){
+        contraAtaqueEnemigo = 'AGUA'
+        alert("Ataque enemigo " + contraAtaqueEnemigo)
+    }else if(contraAtaqueAleatorio == 3){
+        contraAtaqueEnemigo = 'TIERRA'
+        alert("Ataque enemigo " + contraAtaqueEnemigo)
+    }
+}   
+
+/**
+ * Si el usuario seleccionó el botón de fuego, esta función cambiara la variable global "ataqueJugador", lanzará 
+ * una alerta y llamada a la función "ataqueEnemigo"
+ * @returns {void}
+ */
 function ataqueFuego(){
     ataqueJugador = 'FUEGO'
     alert(ataqueJugador)
+    ataqueEnemigo();
 }
 
+/**
+ * Si el usuario seleccionó el botón de agua, esta función cambiara la variable global "ataqueJugador", lanzará 
+ * una alerta y llamada a la función "ataqueEnemigo"
+ * @returns {void}
+ */
 function ataqueAgua(){
     ataqueJugador = 'AGUA'
     alert(ataqueJugador)
+    ataqueEnemigo();
 }
 
+/**
+ * Si el usuario seleccionó el botón de tierra, esta función cambiara la variable global "ataqueJugador", lanzará 
+ * una alerta y llamada a la función "ataqueEnemigo"
+ * @returns {void}
+ */
 function ataqueTierra(){
     ataqueJugador = 'TIERRA'
     alert(ataqueJugador)
+    ataqueEnemigo();
 }
 
    //FUNCIÓN ALEATORIEDAD

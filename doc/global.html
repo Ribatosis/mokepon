@@ -94,298 +94,6 @@
     
 
     
-        <h3 class="subsection-title">Members</h3>
-
-        
-            
-<h4 class="name" id="botonMascotaJugador"><span class="type-signature"></span>botonMascotaJugador<span class="type-signature"> :HTMLButtonElement</span></h4>
-
-
-
-
-<div class="description">
-    Obtiene el botón del DOM con el ID 'botonMascotas' y asigna un evento de clic que ejecuta la función 'seleccionarMascotaJugador'.
-</div>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">HTMLButtonElement</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mokepon.js.html">mokepon.js</a>, <a href="mokepon.js.html#line121">line 121</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-        
-            
-<h4 class="name" id="hipogeChamp"><span class="type-signature"></span>hipogeChamp<span class="type-signature"> :HTMLElement</span></h4>
-
-
-
-
-<div class="description">
-    Las variables que terminan en 'Champ' representan elementos del DOM que corresponden a los diferentes campeones que puede seleccionar el jugador.
-</div>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">HTMLElement</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mokepon.js.html">mokepon.js</a>, <a href="mokepon.js.html#line87">line 87</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-        
-            
-<h4 class="name" id="spanMascotaEnemigo"><span class="type-signature"></span>spanMascotaEnemigo<span class="type-signature"> :HTMLElement</span></h4>
-
-
-
-
-<div class="description">
-    Le muestra al jugador cuál es la mascota del enemigo por medio del DOM.
-</div>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">HTMLElement</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mokepon.js.html">mokepon.js</a>, <a href="mokepon.js.html#line110">line 110</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-        
-            
-<h4 class="name" id="spanMascotaJugador"><span class="type-signature"></span>spanMascotaJugador<span class="type-signature"> :HTMLElement</span></h4>
-
-
-
-
-<div class="description">
-    Le muestra al jugador qué mascota eligió por medio del DOM.
-</div>
-
-
-
-    <h5>Type:</h5>
-    <ul>
-        <li>
-            
-<span class="param-type">HTMLElement</span>
-
-
-        </li>
-    </ul>
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mokepon.js.html">mokepon.js</a>, <a href="mokepon.js.html#line103">line 103</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-        
-    
 
     
         <h3 class="subsection-title">Methods</h3>
@@ -520,7 +228,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mokepon.js.html">mokepon.js</a>, <a href="mokepon.js.html#line73">line 73</a>
+        <a href="mokepon.js.html">mokepon.js</a>, <a href="mokepon.js.html#line185">line 185</a>
     </li></ul></dd>
     
 
@@ -561,6 +269,536 @@
     <dd>
         
 <span class="param-type">number</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="ataqueAgua"><span class="type-signature"></span>ataqueAgua<span class="signature">()</span><span class="type-signature"> &rarr; {void}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Si el usuario seleccionó el botón de agua, esta función cambiara la variable global "ataqueJugador", lanzará una alerta y llamada a la función "ataqueEnemigo"
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="mokepon.js.html">mokepon.js</a>, <a href="mokepon.js.html#line159">line 159</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">void</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="ataqueEnemigo"><span class="type-signature"></span>ataqueEnemigo<span class="signature">()</span><span class="type-signature"> &rarr; {void}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Selecciona el tipo de ataque enemigo usando la función aleatorio y lo almacena en la variable global "contraAtaqueEnemigo", esto permite que la variable sea dinamica y se pueda llamar esta función más adelanteen el código.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="mokepon.js.html">mokepon.js</a>, <a href="mokepon.js.html#line128">line 128</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">void</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="ataqueFuego"><span class="type-signature"></span>ataqueFuego<span class="signature">()</span><span class="type-signature"> &rarr; {void}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Si el usuario seleccionó el botón de fuego, esta función cambiara la variable global "ataqueJugador", lanzará una alerta y llamada a la función "ataqueEnemigo"
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="mokepon.js.html">mokepon.js</a>, <a href="mokepon.js.html#line148">line 148</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">void</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="ataqueTierra"><span class="type-signature"></span>ataqueTierra<span class="signature">()</span><span class="type-signature"> &rarr; {void}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    Si el usuario seleccionó el botón de tierra, esta función cambiara la variable global "ataqueJugador", lanzará una alerta y llamada a la función "ataqueEnemigo"
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="mokepon.js.html">mokepon.js</a>, <a href="mokepon.js.html#line170">line 170</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">void</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="iniciarJuego"><span class="type-signature"></span>iniciarJuego<span class="signature">()</span><span class="type-signature"> &rarr; {void}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    El jugador selecciona su mascota, el jugador da click en uno de los botones de ataque llamando a la función propia de cada botón.
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="mokepon.js.html">mokepon.js</a>, <a href="mokepon.js.html#line11">line 11</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">void</span>
 
 
     </dd>
@@ -679,7 +917,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mokepon.js.html">mokepon.js</a>, <a href="mokepon.js.html#line44">line 44</a>
+        <a href="mokepon.js.html">mokepon.js</a>, <a href="mokepon.js.html#line93">line 93</a>
     </li></ul></dd>
     
 
@@ -834,7 +1072,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="mokepon.js.html">mokepon.js</a>, <a href="mokepon.js.html#line11">line 11</a>
+        <a href="mokepon.js.html">mokepon.js</a>, <a href="mokepon.js.html#line40">line 40</a>
     </li></ul></dd>
     
 
@@ -898,13 +1136,13 @@
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#aleatorio">aleatorio</a></li><li><a href="global.html#botonMascotaJugador">botonMascotaJugador</a></li><li><a href="global.html#hipogeChamp">hipogeChamp</a></li><li><a href="global.html#seleccionarMascotaEnemigo">seleccionarMascotaEnemigo</a></li><li><a href="global.html#seleccionarMascotaJugador">seleccionarMascotaJugador</a></li><li><a href="global.html#spanMascotaEnemigo">spanMascotaEnemigo</a></li><li><a href="global.html#spanMascotaJugador">spanMascotaJugador</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#aleatorio">aleatorio</a></li><li><a href="global.html#ataqueAgua">ataqueAgua</a></li><li><a href="global.html#ataqueEnemigo">ataqueEnemigo</a></li><li><a href="global.html#ataqueFuego">ataqueFuego</a></li><li><a href="global.html#ataqueTierra">ataqueTierra</a></li><li><a href="global.html#iniciarJuego">iniciarJuego</a></li><li><a href="global.html#seleccionarMascotaEnemigo">seleccionarMascotaEnemigo</a></li><li><a href="global.html#seleccionarMascotaJugador">seleccionarMascotaJugador</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Thu Jan 09 2025 02:52:41 GMT-0500 (hora estándar de Colombia)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Fri Jan 10 2025 00:05:02 GMT-0500 (hora estándar de Colombia)
 </footer>
 
 <script> prettyPrint(); </script>
